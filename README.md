@@ -1,67 +1,39 @@
-### Проект «СКАН»
+Getting Started with Create React App
+This project was bootstrapped with Create React App.
 
-## Описание
-Практический кейс от компании «СКАН». Разрабатывается клиентская часть веб-сервиса, предназначенного для поиска публикаций в СМИ по ИНН компании. Серверная логика уже реализована командой «СКАН»
+Available Scripts
+In the project directory, you can run:
 
-## Функциональные требования
-- Главная страница
-- Страница авторизации
-- Форма для поиска по параметрам (ИНН, количество документов)
-- Страница результатов в виде списка найденных публикаций
+npm start
+Runs the app in the development mode.
+Open http://localhost:3000 to view it in the browser.
 
-## Дополнительные требования
-- Безопасная авторизация с хранением токена в localStorage
-- Ограниченный доступ: различие в функциональности для авторизованных и неавторизованных пользователей
-- Валидация обязательных полей, запрет на отправку незаполненных форм
-- Ленивая загрузка результатов (lazy loading) для повышения удобства пользователя
-- Управление состоянием через Redux или React Context
+The page will reload if you make edits.
+You will also see any lint errors in the console.
 
-## Установка проекта
-1. Клонировать репозиторий
-2. Перейти в директорию проекта
-3. Установить зависимости: `npm install`
-4. Запустить проект: `npm start`
+npm test
+Launches the test runner in the interactive watch mode.
+See the section about running tests for more information.
 
-## Сборка
-Команда `npm run build` создаёт оптимизированную версию в папке build/.
+npm run build
+Builds the app for production to the build folder.
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## Ограничения
-- Максимум 1000 документов в выборке, но API возвращает не более 45
-- Отсутствуют фото и имя пользователя — используются заглушки
-- Не обновляется информация о ранее использованных ИНН
-- Изображения обложек статей не предоставляются — используется дефолтная заглушка
+The build is minified and the filenames include the hashes.
+Your app is ready to be deployed!
 
-## Страница результатов поиска
-Публикации отображаются в карточках с такими элементами:
-- Дата и источник публикации (ссылка на оригинальный материал)
-- Заголовок статьи
-- Теги по типу публикации (новости, анонсы, технические обновления и т.д.)
-- Текст публикации с изображениями (если имеются)
-- Кнопка "Читать в источнике" (открывает ссылку в новой вкладке)
-- Информация о количестве слов
+See the section about deployment for more information.
 
-## Реализация ленивой подгрузки
-- Сначала отображаются 10 публикаций
-- Кнопка "Показать больше" загружает следующие 10
-- После загрузки всех данных кнопка скрывается
-- Во время загрузки отображается индикатор (лоадер)
-- При отсутствии результатов выводится соответствующее сообщение
+npm run eject
+Note: this is a one-way operation. Once you eject, you can’t go back!
 
-## Общие требования к интерфейсу
-- Полное соответствие макету (цвета, шрифты, отступы и размеры)
-- Адаптивная вёрстка, корректная работа на мобильных устройствах
-- Использование семантической HTML-разметки (header, main, footer и т.д.)
-- Визуальные эффекты наведения на кнопках и ссылках
-- Грамотное подключение стилей (CSS, CSS Modules, Styled Components и др.)
-- Использование классов вместо ID и тегов в CSS
-- Применение SVG-иконок из Figma для качественной графики
+If you aren’t satisfied with the build tool and configuration choices, you can eject at any time. This command will remove the single build dependency from your project.
 
-## Требования к коду
-1. Использование React
-2. Логичное и читаемое разбиение на компоненты
-3. Управление состоянием через useReducer, Context API или Redux
-4. Соблюдение принципов KISS и DRY
-5. Обоснованное использование сторонних библиотек
-6. Чистый, отформатированный код с осмысленными именами переменных и функций
-7. Использование современных стандартов JavaScript и React
-8. Исключение папки node_modules из отслеживания в .gitignore
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except eject will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use eject. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+Learn More
+You can learn more in the Create React App documentation.
+
+To learn React, check out the React documentation.
